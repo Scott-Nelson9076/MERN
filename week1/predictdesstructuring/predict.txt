@@ -1,0 +1,11 @@
+Problem 1: Will console log Tesla and Mercedes
+
+Problem 2:console.log(name) Reference Error as name is not defined console.log(otherName) will console log Elon
+
+Problem 3: console.log(password) will console log "12345" as that variable was declared outside of the person object so its just console logging the declared variable
+as such since the variable was declared outside the person it cant be destructured from the person object so the console.log(hashedpassword) will come back undefined
+
+Problem 4 console.log(first==second) console logs false console.log(first==third) console logs true
+
+Problem 5 console.log(key) will console log the word 'value' console.log(secondKey) will console log the second key array
+console.log(secondKey[0]) will console log the number 1 as its first in the array at index 0  and console.log(willthiswork) will console log the number 5 as its in the 1 or 2nd index of the array
