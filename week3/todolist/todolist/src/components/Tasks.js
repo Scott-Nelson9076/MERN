@@ -20,7 +20,7 @@ const Tasks = (props) => {
                 <label htmlFor="task">Task To Do:</label>
                 <input type = "text" value= {task} name = "task" onChange={(e) => setTask(e.target.value)}/>
                 <div>
-                    <input type = "SUBMIT" value = "Add Task"/>
+                    <button>Add Task</button>
                 </div>
             </form>
         </div>
