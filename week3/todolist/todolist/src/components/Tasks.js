@@ -7,7 +7,7 @@ const Tasks = (props) => {
 
     const subHand = (event) => {
         event.preventDefault();
-        setTaskArr([...taskArr, {content:task,toDelete:false,id: Math.floor(Math.random()*100000000).toString(),},]);
+        setTaskArr([...taskArr, {content:task,toGetDone:false,id: Math.floor(Math.random()*100000000).toString(),},]);
     };
 
     const handleChange =(e) => setTask(e.target.value);
