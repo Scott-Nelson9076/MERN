@@ -2,11 +2,14 @@ const ShowTasks = (props) => {
     const {taskArr,setTaskArr} = props;
 
     const done = {
-        textDecorationLine: 'line-through'
+        textDecorationLine: 'line-through',
+        color:'Green'
     }
 
     const notDone = {
-        textDecorationLine:'underline'
+        textDecorationLine:'underline',
+        color:'Red'
+
     }
     
 
