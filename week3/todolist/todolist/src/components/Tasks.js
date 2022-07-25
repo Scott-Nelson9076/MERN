@@ -6,9 +6,8 @@ const Tasks = (props) => {
     const [task, setTask] = useState('')
 
     const subHand = (event) => {
-        event.preventDeafult();
+        event.preventDefault();
         setTaskArr([...taskArr, {content:task,toDelete:false,id: Math.floor(Math.random()*100000000).toString(),},]);
-        setTask(""); 
     };
 
     const handleChange =(e) => setTask(e.target.value);
@@ -19,7 +18,7 @@ const Tasks = (props) => {
         <div>
             <form onSubmit={subHand}>
                 <label htmlFor="task">Task To Do:</label>
-                <input type = "text" value = {task} name = "task" onChange={handleChange}/>
+                <input type = "text" value= {task} name = "task" onChange={(e) => setTask(e.target.value)}/>
                 <div>
                     <input type = "SUBMIT" value = "Add Task"/>
                 </div>
