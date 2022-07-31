@@ -8,7 +8,7 @@ const NumberWord = (props) => {
     }
     if (isNaN(numword) === true){
         return (
-            <h1 style={style}>The Bird Is The Word Is : {numword}</h1>
+            <h1 style={style}>The {numword} Is The Word Is : {numword}</h1>
         )
     }
     else if (isNaN(numword) === false) {

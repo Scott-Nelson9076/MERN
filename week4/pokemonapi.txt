@@ -1,0 +1,9 @@
+https://pokeapi.co/api/v2/pokemon/bellsprout
+
+https://pokeapi.co/api/v2/pokemon/pikachu
+
+https://pokeapi.co/api/v2/pokemon/raichu
+
+https://pokeapi.co/api/v2/pokemon/mewtwo
+
+https://pokeapi.co/api/v2/pokemon/ditto
