@@ -6,6 +6,9 @@ const { useState } = require("react");
 
 const Main = (props) => {
     const [products, setProducts] = useState([]);
+    const remove = prodId => {
+        setProducts(products.filter(product => product._id != prodId))
+    }
 
     return (
         <div>

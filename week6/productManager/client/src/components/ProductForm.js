@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios';
 
+
 const ProductForm = (props) => {
     const [name,setName] = useState("");
     const [price, setPrice] = useState("");
@@ -15,8 +16,8 @@ const ProductForm = (props) => {
     }
 
     return(
-        <form onSubmit={subProdHandler}>
-            <div>
+        <form onSubmit={subProdHandler} className = "bg-danger" >
+            <div className='form-group'>
                 <label>Product Name</label><br/>
                 <input type = "text" onChange={(e)=>setName(e.target.value)}/>
             </div>
@@ -29,7 +30,7 @@ const ProductForm = (props) => {
                 <input type = "text" onChange={(e) => setDescription(e.target.value)}/>
             </div>
             <div>
-                <button>Submit</button>
+                <button className='btn-success'>Submit</button>
             </div>
         </form>
     )
