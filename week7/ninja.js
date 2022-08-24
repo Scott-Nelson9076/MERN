@@ -24,3 +24,23 @@ Scott.sayName()
 Scott.showStats()
 
 Scott.drinkSake()
+
+class Sensei extends Ninja{
+    constructor(name) {
+        super(name,200);
+        this.speed = 10
+        this.stregnth = 10
+        this.wisdom = 10
+    }
+    speakWisdom(){
+        this.drinkSake()
+        console.log("Wise Man Never Fall Of Cliff")
+    }
+}
+
+const Sarah = new Sensei("Sarah")
+
+Sarah.speakWisdom()
+
+Sarah.showStats()
+
