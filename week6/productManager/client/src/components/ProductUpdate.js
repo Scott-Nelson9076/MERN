@@ -7,6 +7,7 @@ const ProductUpdate = (props) => {
     const [name, setName] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
+    const [errors, setErrors] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() =>{
@@ -29,12 +30,19 @@ const ProductUpdate = (props) => {
             .then(res => {console.log(res);
                 navigate("/home");
             })
-            .catch(err => console.log(err))
+            .catch(err => {const errorResponse = err.response.data.errors; const errorArr = [];
+                for(const key of Object.keys(errorResponse)){
+                    errorArr.push(errorResponse[key].message)
+                }
+                setErrors(errorArr);
+            })
+            
     }
     return (
         <div>
             <h2>Edit Product</h2>
             <form onSubmit={editProduct}>
+                {errors.map((err,index) => <div key = {index}>{err}</div>)}
                 <div>
                     <label>Name:</label>
                     <input type = "text" name = "name" value = {name} onChange = {(e) => {setName(e.target.value)}}/>
